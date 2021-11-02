@@ -1,0 +1,77 @@
+[
+    {
+        "description": "As with all “true teas,” black tea is derived from the Camellia sinensis plant. Leaves of the plant are crushed, curled, rolled, or torn and then left to oxidize before they’re dried and sold. The fact that the leaves are fully oxidized accounts for black tea’s strong, dark flavor profile. The oxidation process also decreases black tea’s flavonoid content a bit, but this brew is still loaded with beneficial properties. Black tea is often sold in some kind of blend, which will determine its flavor profile. The season and place where a tea plant was grown will also impact its flavor. As a general rule, black tea is produced in China, India, Sri Lanka, or Nepal.",
+        "benefit": "Black tea is steadily attracting more and more attention from researchers. While studies are still ongoing, so far research suggests black tea may support heart health and help support the body’s protection against oxidative stress (which happens when damaging free radicals are left unchecked in the body.)",
+        "image_url": "https://www.lipton.com/content/dam/unilever/lipton_international/global/general_image/worldtea_abouttea_organic_img1_1460x593-1437575-jpg.jpg",
+        "name": "Black Tea"
+    },
+
+    {
+        "description": "Green tea is prepared from the fresh or withered, lightly heated or steamed leaves of the Camellia sinensis plant. This preparation stops the oxidation process and accounts for green tea’s flavor profile, which is best described as light, fresh, and maybe slightly grassy. Of course, different green teas may boast slightly different flavors, which can range from nutty to fruity to almost seaweed-like. Different flavors are usually explained by where the tea was grown as well as the specifics of how it was processed.",
+        "benefit": "Green tea is the most heavily studied type of true tea, and research into this brew is overwhelmingly positive. So far, research suggests green tea may support mental alertness and acuity (thanks to its caffeine content.support heart health, help support the body’s natural protection against oxidative stress, support brain health and green tea is also a great tea to help support fasting.",
+        "image_url": "https://media.istockphoto.com/photos/glass-cup-with-fresh-green-tea-picture-id628986454?k=20&m=628986454&s=612x612&w=0&h=S2G1B3ezeejB0g5NEWa5j5x_aY_xRGXQxj_E3LbnBTE=",
+        "name": "Green Tea"
+        },
+
+    {
+        "description": "Otherwise known as wulong or “black dragon” tea, oolong tea is semi-oxidized and is always produced as a whole-leaf tea. The level of oxidation can range widely, and so can the tea’s flavor, color, and aroma. The less oxidized the tea, the lighter it is in color; the more oxidized, the darker the color.",
+        "benefit": "Oolong tea is less popular than other “true” teas, and that’s kind of a shame — because this beverage is packed with good-for-you qualities. It has several antioxidant compounds including EGCG, theaflavins, and thearubigins. These compounds can help support the body’s protective measures against free radicals and oxidative stress. Other benefits include, that it may support heart health. It also may support brain health.",
+        "image_url": "https://www.organicfacts.net/wp-content/uploads/oolongtea-1.jpg",
+        "name": "Oolong Tea"
+    },
+
+    {
+        "description": "Pu-erh, a fermented tea, is often more expensive than other “true” teas, and it boasts a loyal (borderline fanatic) fan club. As with the other entries on this list, pu-erh tea is derived from the leaves and stems of the Camellia sinensis plant. It mostly originates from the Yunnan province of China and may be sold in the form of a brick, cake, or dried leaves. Once pu-erh is harvested, its leaves are hand-tossed in giant woks to stop oxidation in its tracks. It then undergoes an additional processing step during which it’s aged in a very humid environment. This process is supposed to bring out the tea’s distinct flavor, which is generally dark, rich, and less astringent than other teas.",
+        "benefit": "Pu-erh isn’t as well-researched as other “true” teas, but there’s still plenty of evidence to suggest it may have several positive effects. Because of its caffeine content, it can help support mental alertness. It is high in antioxidant properties. It may support heart health. It may also help support healthy skin. ",
+        "image_url": "https://cdn.shopify.com/s/files/1/0116/6009/9641/products/menghai-ripe-pu-erh-brewed-tea_grande.jpg?v=1584032301",
+        "name": "Pu-erh Tea"
+    },
+
+    {
+        "description": "White tea is created from new buds and young leaves of the Camellia sinensis plant, which helps explain why it has the most delicate flavor profile of all the “true” teas. The silver hairs on the new buds account for the tea’s whitish hue. Right after harvesting, these buds and leaves are steamed or fried to stop the oxidation process. Then the leaves are dried. This style of processing leads to a light, delicate, and fruity flavor. White tea is also lower in caffeine than other “true” teas.",
+        "benefit": "Because it’s minimally processed, white tea is thought to have especially high levels of good-for-you catechins. It also boasts plenty of other health benefits. It has antioxidant properties, meaning it can potentially help protect against oxidative stress. It may help support the body’s response to inflammation. It may help support dental health thanks to the fact that it contains fluoride, catechins, and tannins. Fluoride is known to support teeth strength, while catechins and tannins may support the management of plaque bacteria in the mouth. It may help support brain health.",
+        "image_url": "https://www.dalton-cosmetics.com/media/wysiwyg/Dalton-Meereskosmetik-Wirkstoffe-Wei_er-Tee.jpg",
+        "name": "White Tea"
+    },
+    {
+        "description": "Chamomile is a pretty, elegant, and fragrant herb that belongs in the Asteraceae plant family. People have been using chamomile for therapeutic purposes for centuries, and today it’s a popular tea—especially among people who are looking to unwind before bed. Chamomile tea is made from the dried flowers of the chamomile plant. There are two primary varieties of chamomile: German Chamomile and Roman Chamomile (which is sometimes called English Chamomile). They’re different species of the same plant, though they grow a bit differently and have a slightly different appearance.",
+        "benefit": "Per a comprehensive 2010 review, chamomile may offer the following benefits, it may support calm and perhaps support healthier sleep habits, it may support digestion.",
+        "image_url": "https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/01/chamomile-tea-on-a-board-1024x683.jpg?w=1155&h=1541",
+        "name": "Chamomile Tea"
+    },
+
+   {
+       "description": "The spicy root (or “rhizome”) of the ginger plant belongs to the same family as healthful spices such as cardamom and turmeric. It adds flavor to a huge variety of dishes and drinks, and people have been using it for therapeutic purposes for thousands of years. It also makes for a delicious and healthful tea.",
+       "benefit": "Many of ginger tea’s health properties stem from compounds called gingerols and shogaols. These compounds aren’t just fun to pronounce; they also seem to help support the body’s response to inflammation. Ginger is also well-known for helping with nausea and helping people cope with motion sickness.",
+       "image_url": "https://selecthealth.org/-/media/selecthealth/blogs/post/2020/02/tumeric_tea_blog_lg.ashx",
+       "name": "Ginger Tea"
+   },
+
+   {
+       "description": "Not surprisingly, hibiscus tea is derived from the hibiscus plant. This plant grows native in North Africa and Southeast Asia and can be found in tropical and subtropical climates around the globe. The red brew is simultaneously sweet and tart (think of it like the tea equivalent of cranberry juice). It’s commonly enjoyed as an iced tea and is a fantastic and refreshing summer drink.",
+       "benefit": "Hibiscus doesn’t have the same “superfood” reputation as some other teas on this list, but maybe it should. Research suggests this pretty plant is packed with potential benefits. It’s high in antioxidants. It may support healthy cholesterol management. It may also help support liver health.",
+       "image_url": "https://recipeblog.in/wp-content/uploads/2019/04/Mint-Hibiscus-Iced-Tea.jpg",
+       "name": "Hibiscus Tea"
+   },
+
+   {
+       "description": "Peppermint tea is perhaps the most popular herbal tea around and is used in a myriad of different herbal infusions. This minty brew—which is derived from the leaves of the mint plant—smells and tastes great and is commonly used to settle an upset stomach. In fact, it’s been used for its great taste and its health benefits for thousands of years.",
+       "benefit": "Much of the research into the possible benefits of peppermint has focused on peppermint oil instead of peppermint tea. That said, because peppermint leaves contain peppermint oil, it’s possible mint tea may deliver some of the same benefits as peppermint in oil form. For instance: It may support digestion and may help make your belly feel a little better. Animal studies suggest mint can help support relaxation in the digestive system and help ease spasms in the gut.Even though it’s caffeine-free, peppermint tea might have a natural energizing effect. One 2005 study found the scent of peppermint may reduce feelings of sleepiness. In another small study, participants reported feeling less fatigued while taking a cognitive test when they consumed peppermint oil ",
+       "image_url": "https://www.liveeatlearn.com/wp-content/uploads/2020/07/fresh-mint-tea-vert.jpg",
+       "name": "Mint Tea"
+   },
+
+   {
+       "description": "This caffeine-free herbal tea is well-known for its rich, red hue and sweet, earthy, slightly floral flavor. (Not coincidentally, rooibos is also sometimes called “red tea” or “red bush tea.”) It’s derived from the fermented leaves of the Aspalathus linearis shrub, which grows natively in South Africa.",
+       "benefit": "Like hibiscus, rooibos doesn’t have a major reputation as a health food. But it should! While research into rooibos is still ongoing, so far studies suggest that, it’s loaded with antioxidant compounds (including aspalathin, nothofagin, and quercetin), which may help support protection against oxidative stress. It may help support heart health. It may help support strong teeth and bones. Red rooibos is loaded with fluoride minerals as well as calcium and manganese—all of which may help support bone and teeth strength.",
+       "image_url": "https://draxe.com/wp-content/uploads/2016/06/RooboisTeaThumbnail.jpg",
+       "name": "Rooibos Tea"
+   }
+  ]
+  
+
+
+
+
+
+ 
