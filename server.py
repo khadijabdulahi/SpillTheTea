@@ -10,21 +10,31 @@ app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
-# home page
+
+@app.route("/")
+def homepage():
+    """View homepage."""
+
+    return render_template("homepage.html")
 
 
-# quiz page
+@app.route("/teas")
+def all_teas():
+    """View all teas."""
 
-# sign-up/login
+    teas = crud.get_teas()
 
-#CRUD
-# create user
+    return render_template("all_teas.html", teas=teas)
 
-# GET all teas
 
-# GET one tea
+@app.route("/teas/<id>")
+def show_tea(id):
+    """Show details on a particular tea."""
 
-# submit quiz
+    tea = crud.get_tea_by_id(id)
+
+    return render_template("tea_details.html", tea=tea)
+
 
 
 if __name__ == "__main__":

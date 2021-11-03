@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ tea.name }} - Details{% endblock %}
+
+{% block body %}
+<h1>{{ tea.name }}</h1>
+<h3>  Description </h3>
+<p>
+  {{ tea.description}}
+</p>
+
+<h3>  Benefits </h3>
+<p>   {{ tea.benefit}} </p>
+
+<img src="{{ tea.image_url }}">
+{% endblock %}

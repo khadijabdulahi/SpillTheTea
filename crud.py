@@ -27,6 +27,18 @@ def create_tea(name, description, benefit, image_url):
     return tea
 
 
+def get_teas():
+    """Return all teas."""
+
+    return Tea.query.all()
+
+
+def get_tea_by_id(id):
+    """Return a tea by primary key."""
+
+    return Tea.query.get(id)
+
+
 
 if __name__ == "__main__":
     from server import app
