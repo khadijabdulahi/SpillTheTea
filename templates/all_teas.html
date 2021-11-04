@@ -1,11 +1,14 @@
 {% block body %}
   <h1>All Teas</h1>
+  <li><a href="/">Home</a></li>
 
   <ul>
     {% for tea in teas %}
       <li>
         <a href="/teas/{{ tea.id }}">
           {{ tea.name }}
+          <br> 
+          <img src="{{ tea.image_url }}">
         </a>
       </li>
     {% endfor %}

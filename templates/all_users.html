@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}All Users{% endblock %}
+
+{% block body %}
+   <h2>Create an Account</h2>
+  <form action="/register" method="POST">
+    <p>
+        Name <input type="text" name="firstname">
+      </p>
+    <p>
+      Email <input type="text" name="email">
+    </p>
+
+    <p>
+      Password <input type="password" name="password">
+    </p>
+
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+
+  <h2>Log In</h2>
+  <form action="/login" method="POST">
+    <!-- <p> Name <input type="text" name="firstname">  </p> -->
+    <p>
+      Email <input type="text" name="email">
+    </p>
+
+    <p>
+      Password <input type="password" name="password">
+    </p>
+
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+  </ul>
+{% endblock %}

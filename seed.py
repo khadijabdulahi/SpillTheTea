@@ -28,3 +28,10 @@ for tea in tea_data:
 
     db_tea = crud.create_tea(name, description, benefit, image_url)
     teas_in_db.append(db_tea)
+    
+for n in range(10):
+    firstname = (f"Test {n}")
+    email = (f"user{n}@test.com" )
+    password = "test"
+
+    user = crud.create_user(email, firstname, password)

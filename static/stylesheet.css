@@ -1,0 +1,15 @@
+#result {
+    border: 1px dotted #ccc;
+    padding: 3px;
+  }
+  #result ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  #result ul li {
+    padding: 5px 0;
+  }
+  #result ul li:hover {
+    background: #eee;
+  }
