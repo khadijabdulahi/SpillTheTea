@@ -3,14 +3,31 @@
 {% block title %}{{ tea.name }} - Details{% endblock %}
 
 {% block body %}
-<h1>{{ tea.name }}</h1>
-<h3>  Description </h3>
-<p>
-  {{ tea.description}}
-</p>
 
-<h3>  Benefits </h3>
-<p>   {{ tea.benefit}} </p>
+<div class="container">
+  <div class="row">
+    <div class="col"> 
+      <h1>{{ tea.name }}
+        </h1>
+          <h3>  Description
+          </h3>
+                 <p>
+          {{ tea.description}}
+        </p>
+      <h3>  
+        Benefits 
+      </h3>
+      <p>  
+         {{ tea.benefit}} 
+      </p>
+    </div>
+  <div class="col">
+    <div class="row">
+      <img src="{{ tea.image_url }}">
+    </div>
+  {% endblock %}
+    </div>
+  </div>
+</div>
 
-<img src="{{ tea.image_url }}">
-{% endblock %}
+
