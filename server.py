@@ -15,8 +15,9 @@ def homepage():
     """View homepage."""
     
     # if logged in, then show that 
+    teas = crud.get_teas()
 
-    return render_template("homepage.html")
+    return render_template("homepage.html", teas=teas)
 
 
 @app.route("/teas")
@@ -33,8 +34,10 @@ def show_tea(id):
     """Show details on a particular tea."""
 
     tea = crud.get_tea_by_id(id)
+    teas = crud.get_teas()
 
-    return render_template("tea_details.html", tea=tea)
+
+    return render_template("tea_details.html", teas=teas, tea=tea)
 
 
 
@@ -43,8 +46,9 @@ def all_users():
     """View all users."""
 
     users = crud.get_users()
+    teas = crud.get_teas()
 
-    return render_template("all_users.html", users=users)
+    return render_template("login.html", users=users, teas = teas)
 
 
 @app.route("/register", methods=["POST"])
@@ -104,8 +108,18 @@ def process_logout():
     
 @app.route("/profile")
 def profile_page(): 
+        
+    teas = crud.get_teas()
+
+    return render_template("profile.html", teas=teas)
     
-    return render_template("profile.html")
+@app.route("/teaquiz")
+def tea_quiz(): 
+        
+    teas = crud.get_teas()
+
+    return render_template("tea_quiz.html", teas=teas)
+
 
 
 if __name__ == "__main__":

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Login or Register{% endblock %}
+
+{% block body %}
+<div class="backgroundimage"> 
+<div class="pt-5" >
+  <div class="row d-flex justify-content-center">
+    <div class="col-6" >
+      
+    <h2>Create an Account</h2>
+    <form action="/register" method="POST">
+      <div class="mb-3">
+        <label for="inputfirstname" class="form-label">First Name</label>
+        <input type="text" name="firstname" class="form-control" id="firstname" >
+          <div id="firstnameHelp" class="form-text">Enter your first name.</div>
+      </div>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email address
+        </label>
+          <input type="email" name = "email" class="form-control" id="email">
+            <div id="emailHelp" class="form-text">Please enter a valid email address.
+            </div>
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">Password</label>
+          <input type="password" name ="password" class="form-control" id="password">
+            <div id="emailHelp" class="form-text">Passwords must be 8-10 chararacters long.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <h2>Log In</h2>
+    <form action="/login" method="POST">
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email address</label>
+          <input type="email" name = "email" class="form-control" id="email">
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input type="password" name ="password" class="form-control" id="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+

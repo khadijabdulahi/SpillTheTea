@@ -3,29 +3,7 @@
 
 {% block body %}
   <h1>Spill The Tea!</h1>
-  <nav class="navbar navbar-light" style="background-color: burlywood;">
-    <!-- Navbar content -->
-    {% if session.get('firstname') %}
-      <div> Hello, <a class="p-2 text-dark" href="/profile">{{session.firstname}} </a></div> 
-      <form action="/logout" method="post"><button>Logout</button></form>
-      {% else %}
-      <a class="p-2 text-dark">Welcome guest</a>
-      <a href="/login"> <button> Login/Regiser </button> </a>
-    {% endif %}
-
-  <h2>Navigation</h2>
-  
-    <button><a href="/teas">View all teas</a></button>
-  </ul>
-  <h2>Tea Search</h2>
-
-<form autocomplete="off" action="/search" >
-    <input onkeyup="showTeaResults(this.value)" id="tea_input" type="text" name="teasearch" placeholder="Search for Tea">
-  <!-- <input type="submit"> -->
-    <div style="width:300px;" id="result"></div>
-</form>
-
-  </div>
 
   
 {% endblock %}
+
