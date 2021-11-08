@@ -41,25 +41,38 @@ img{
   }
   }
 
+  .container-fluid {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow: hidden;
+  }
+
   /* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .col-md-3{
       width:100%;
       float:left;
       margin:0;
   }
-   } */
-/* 
-   .backgroundimage {
+   } */ 
+
+   .background-image-container {
     background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2015%2F05%2F25%2FGettyImages-564075419-2000.jpg");
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100px;
-    height: 100px;
-  } */
+    min-height: 92vh;
+    min-width: 100vw;
+  }
+
+  .tea-form{
+    /* background-color: #e3f2fd; */
+    background-color: rgb(251, 251, 251);
+    border-radius: 20px;
+    padding: 26px;
+  }
 
   
-  .div-center {
+  /* .div-center {
     width: 400px;
     height: 400px;
     background-color: #fff;
@@ -76,11 +89,11 @@ img{
     border-bottom: 2px solid #ccc;
     display: table;
   }
-  
-  div.content {
+   */
+  /* div.content {
     display: table-cell;
     vertical-align: middle;
-  }
+  } */
 
 
 

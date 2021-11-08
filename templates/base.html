@@ -18,49 +18,65 @@
      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand"> <strong> Spill the Tea </strong></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light pt-3 pb-4">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-            <a class="nav-link" href="/teas">Teas</a>
-            <a class="nav-link" href="/teaquiz">Quiz</a>
-            {% if not session.get('firstname') %}  
-            <a class="nav-link" href="/login">Login/Register</a>
-              {% else %}
-              <a class="nav-link" href="/profile">favorites</a>
-              <a class="nav-link" form action="/logout" method="post" href="/logout"> Logout</a>
-              <form action="/logout" method="post"><button>Logout</button></form>
-              {% endif %}
-              <div class="dropdown"> 
+        </button> -->
+        <a class="navbar-brand" aria-current="page" href="/"> <strong> Spill the Tea </strong></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/teas">Teas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/teaquiz">Quiz</a>
+            </li>
+            <li class="nav-item dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Select a Tea
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="">
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 {% for tea in teas %}
                 <li><a class="dropdown-item" href="/teas/{{ tea.id }}">{{ tea.name}} </a></li>
                 {% endfor %}
               </ul>
-
-            </div>
+            </li>
+            {% if session.get('firstname') %}  
+              <li>
+                <a class="nav-link" href="/profile">Favorties</a>
+              </li>
+            {% endif %}
+          </ul>
+          {% if not session.get('user_email') %}  
+            <a class="nav-link" href="/login">
+              <button class="btn btn-primary"> 
+                Login/Register 
+              </button> 
+            </a>
+          {% else %}
+              <form class="d-flex" action="/logout" method="post">
+                <button class="btn btn-danger " type="submit">Logout</button>
+              </form>
+          {% endif %}
+        </div>
+      </div>
     </nav>
-    <div class="container">
-    {% for msg in get_flashed_messages() %}
-      <p class="flash-msg">
-        {{ msg }}
-      </p>
+
+      {% for msg in get_flashed_messages() %}
+        <div class="container pt-2">
+          <p class="flash-msg">
+            {{ msg }}
+          </p>
+        </div>
       
-    {% endfor %}
-    
+      {% endfor %}
+      
 
-    {% block body %}{% endblock %}
+      {% block body %}{% endblock %}
 
-    {% block after_body %}{% endblock %}
-    </div>
+      {% block after_body %}{% endblock %}
   </body>
   <script src="/static/search.js"></script>
 </html>
