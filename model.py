@@ -80,8 +80,7 @@ class Favorite(db.Model):
 
     tea = db.relationship("Tea", backref="favorites")
     user = db.relationship("User", backref="favorites")
-    
-    
+   
     def __repr__(self):
         return f"<Favorite tea_id={self.tea_id} user_id={self.user_id}>"
 

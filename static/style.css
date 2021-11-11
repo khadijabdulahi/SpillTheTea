@@ -71,6 +71,11 @@ img{
     padding: 26px;
   }
 
+
+#map {
+  width: 550px;
+  height: 550px;
+}
   
   /* .div-center {
     width: 400px;
@@ -106,3 +111,9 @@ img{
     bottom: 0;
   } */
 
+/* 
+  #favorite, {
+    color: green;
+    cursor: pointer;
+} */
+  

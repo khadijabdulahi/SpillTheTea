@@ -1,13 +1,37 @@
 {% extends 'base.html' %}
 
-{% block title %}User's Personal Profile Page{% endblock %}
+{% block title %}Profile Page {% endblock %}
 
 {% block body %}
 <div class="container mt-4">
 
     <h1> Welcome! </h1>
+    <h1>Favorites</h1>
 
+    
+    {% for fav_tea in favorite_teas %}
+    <!-- <div>{{fav_tea.tea.name}}</div> -->
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-4">
+        <div class="card shadow-sm">
+          <img src="{{ fav_tea.tea.image_url }}" class="bd-placeholder-img card-img-top" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          {{ fav_tea.tea.name }}
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/teas/{{ fav_tea.tea.id }}">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      {% endfor %}
 </div>
-
-
+    
 {% endblock %}
+    
+
+

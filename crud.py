@@ -59,6 +59,38 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).first()
 
 
+def add_favorite_tea(tea_id, user_id):
+    """Create and return a new favorite."""
+
+    favorite = Favorite(tea_id=tea_id,
+                        user_id=user_id)
+
+    db.session.add(favorite)
+    db.session.commit()
+
+    return favorite
+
+
+def get_user_favorite_teas(user_id):
+    """Get all favorite teas a user favorited. """
+# Need to do join 
+    return Favorite.query.filter_by(user_id= user_id).all()
+
+def check_if_tea_in_favorites(tea_id):
+    """Check if tea exists in favorites table and return True or False"""
+    return True if Favorite.query.filter_by(tea_id = tea_id).first() else False 
+  
+def remove_favorite_tea(tea_id):
+    """Unfavorite a tea a user favorited."""
+    
+    favorited_tea = Favorite.query.filter_by(tea_id = tea_id).one()
+    db.session.delete(favorited_tea)
+    db.session.commit()
+    return " "
+
+
+
+
 if __name__ == "__main__":
     from server import app
 

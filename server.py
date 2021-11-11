@@ -1,14 +1,20 @@
 """Server for tea app."""
 
-from flask import Flask, render_template, request, flash, session, redirect
+from flask import Flask, render_template, request, flash, session, redirect, jsonify, json
 from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
+import os 
+
+mapbox = os.environ["mapbox_token"]
 
 app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
+@app.route("/mapbox")
+def send_mapbox_token():
+    return mapbox 
 
 @app.route("/")
 def homepage():
@@ -38,7 +44,6 @@ def show_tea(id):
 
 
     return render_template("tea_details.html", teas=teas, tea=tea)
-
 
 
 @app.route("/login")
@@ -91,6 +96,7 @@ def process_login():
         # Log in user by storing the user's email in session
         session["user_email"] = user.email
         session["firstname"] = user.firstname
+        session["user_id"] = user.id
         flash(f"Welcome back, {user.firstname}!")
 
     return redirect("/")
@@ -106,12 +112,12 @@ def process_logout():
     else:
         return redirect("/")
     
-@app.route("/profile")
-def profile_page(): 
+# @app.route("/profile")
+# def profile_page(): 
         
-    teas = crud.get_teas()
+#     teas = crud.get_teas()
 
-    return render_template("profile.html", teas=teas)
+#     return render_template("profile.html", teas=teas)
     
 @app.route("/teaquiz")
 def tea_quiz(): 
@@ -119,6 +125,63 @@ def tea_quiz():
     teas = crud.get_teas()
 
     return render_template("tea_quiz.html", teas=teas)
+
+
+@app.route("/favorite_action/<tea_id>", methods=["POST"])
+def update_favorite(tea_id):
+    """Allows user to save a tea to their profile"""
+    
+    #create a variable represeting user in a session 
+    user = session["user_email"]
+    
+    # Get the tea object 
+    tea = crud.get_tea_by_id(tea_id)
+    user_id = session["user_id"]
+    
+    # If current user is logged in
+    if user:
+        # Get instance of user fav for selected tea
+        # user_favs = crud.get_user_favorites(user_id)
+
+        # If user has already saved the tea, remove favorite.
+        ## Function from crud will return true/false
+        response = crud.check_if_tea_in_favorites(tea_id)
+        if response:
+            #unfill the user button and remove from session. 
+            crud.remove_favorite_tea(tea_id)
+            return "Removed tea"
+            
+        # Otherwise, create new fav for user.
+        else:
+            user_id = session["user_id"]
+            favorite = crud.add_favorite_tea(tea_id, user_id)
+            return "Added tea"
+    
+@app.route("/check_favorites/<tea_id>")
+def check_favorite_tea(tea_id):
+    """Check if user saved tea to profile"""
+    response = crud.check_if_tea_in_favorites(tea_id)
+    if response == True: 
+        return json.dumps(True)
+    else: 
+        return json.dumps(False)
+        
+@app.route("/profile")
+def show_user_profile():
+    user_email = session["user_email"]
+    user = crud.get_user_by_email(user_email)
+    teas = crud.get_teas()
+    user_id = session["user_id"]
+
+    favorite_teas = crud.get_user_favorite_teas(user_id)
+    print(favorite_teas)
+    
+    return render_template("profile.html", user=user, favorite_teas=favorite_teas, teas=teas)
+
+
+# route getting all users favorited teas. To display on profile page. 
+#favorite button changing color. Two different buttons unfavorite button and favorite button. create add it to the table. 
+#uncolors 
 
 
 
