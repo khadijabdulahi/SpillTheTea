@@ -45,6 +45,16 @@ def show_tea(id):
 
     return render_template("tea_details.html", teas=teas, tea=tea)
 
+@app.route("/quiz_result/<id>")
+def show_quiz_result(id):
+    
+    tea = crud.get_tea_by_id(id)    
+    data = {
+        'id':tea.id,
+        'name': tea.name,
+        'image': tea.image_url
+    }
+    return json.dumps(data)
 
 @app.route("/login")
 def all_users():
@@ -177,6 +187,7 @@ def show_user_profile():
     print(favorite_teas)
     
     return render_template("profile.html", user=user, favorite_teas=favorite_teas, teas=teas)
+
 
 
 # route getting all users favorited teas. To display on profile page. 

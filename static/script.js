@@ -1,7 +1,6 @@
 $(window).on("load", function () {
   $.get('/mapbox', response => {
     console.log(response)
-    // JSON.stringify(response)
     mapboxgl.accessToken = String(response)
 
     navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
