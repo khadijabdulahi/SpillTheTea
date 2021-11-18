@@ -5,8 +5,12 @@ from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
 import os 
+import requests
 
 mapbox = os.environ["mapbox_token"]
+
+yelp = os.environ["yelp_token"]
+yelp_url= "https://api.yelp.com/v3/businesses/search"
 
 app = Flask(__name__)
 app.secret_key = "dev"
@@ -188,11 +192,39 @@ def show_user_profile():
     
     return render_template("profile.html", user=user, favorite_teas=favorite_teas, teas=teas)
 
+@app.route("/search")
+def render_search_page():
+    teas = crud.get_teas()
+    
+    return render_template("search.html", teas=teas)
+
+def yelp_api_search(zipcode):
+
+    headers = {'Authorization': 'Bearer '+ yelp}
+    parameters = {'location': zipcode,
+               'term': 'tea', 
+               'limit': 12}
+    response = requests.get(yelp_url,
+                                    params=parameters,
+                                    headers=headers)
+    
+    data = response.json()
+
+    return data
 
 
-# route getting all users favorited teas. To display on profile page. 
-#favorite button changing color. Two different buttons unfavorite button and favorite button. create add it to the table. 
-#uncolors 
+
+@app.route('/process_search', methods = ["POST"])
+def processing_search():
+    """User submits zipcode to be search for tea cafe"""
+
+    teas = crud.get_teas()
+    zipcode = request.form.get("zipcode")
+    data = yelp_api_search(zipcode) 
+
+    business = data['businesses']    
+
+    return render_template("tea_cafe.html", businesses=business, teas=teas)
 
 
 

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+  
+{% block body %}
+<div class="container mt-4">
+    <div class="row">
+        {% for business in businesses %}
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-4">
+            <div class="card">
+                <img class="bd-placeholder-img card-img-top" role="img" data-src="holder.js/100px200/" alt="100%x200" src= "{{ business.image_url }}" data-holder-rendered="true" s preserveAspectRatio="xMidYMid slice">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ business.name}}</h5>
+                    <p class="card-text">Rating: {{business.rating}}</p>
+                    <p class="card-text"> 
+                        <span>{{business.location.display_address[0]}}</span>
+                        <span>{{business.location.display_address[1]}}</span>
+                   </p>
+                   <a href="{{business.url}}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+  
+
+{% endblock %}
+
+
