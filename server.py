@@ -7,14 +7,15 @@ from jinja2 import StrictUndefined
 import os 
 import requests
 
+app = Flask(__name__)
+app.secret_key = "dev"
+app.jinja_env.undefined = StrictUndefined
+
 mapbox = os.environ["mapbox_token"]
 
 yelp = os.environ["yelp_token"]
 yelp_url= "https://api.yelp.com/v3/businesses/search"
 
-app = Flask(__name__)
-app.secret_key = "dev"
-app.jinja_env.undefined = StrictUndefined
 
 @app.route("/mapbox")
 def send_mapbox_token():

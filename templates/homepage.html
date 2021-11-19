@@ -7,10 +7,44 @@
     <h1>Spill The Tea!</h1>
   </div>
 
-  <title> Google Maps Clone </title>
+  <title> Mapbox </title>
   <body> 
-    <div id='map' ></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>loading...</p>
+                <footer class="blockquote-footer">
+                  <cite title="Source Title"></cite>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="card-footer">
+              <button id="quote-button" class="btn btn-primary">New Quote</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+        </div>
+        <div class="col">
+
+          <div id='map' ></div>
+        </div>
+      </div>
+
+    </div>
+
+
+
     <script src="/static/script.js" defer>  </script>
+    <script src="/static/quoteGenerator.js">  </script>
+
+    
     
   </body>
  

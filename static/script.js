@@ -1,6 +1,5 @@
-$(window).on("load", function () {
+// $(window).on("load", function () {
   $.get('/mapbox', response => {
-    console.log(response)
     mapboxgl.accessToken = String(response)
 
     navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
@@ -26,14 +25,33 @@ $(window).on("load", function () {
         const nav = new mapboxgl.NavigationControl()
         map.addControl(nav)
       
-        var directions = new MapboxDirections({
+        let directions = new MapboxDirections({
           accessToken: mapboxgl.accessToken
         })
       
         map.addControl(directions, "top-left")
       }
+      
 })
+// })
+$(".test").click(function(){
+  $("#exampleModal").modal("show");
+});
+
+$("#closebutton").click(function(){
+  $("#exampleModal").modal("hide");
 })
 
-
+map.on('load', function(){
+  $.get('/mapbox', response => {
+    mapboxgl.accessToken = String(response)
+    let directions = new MapboxDirections({
+      accessToken: mapboxgl.accessToken
+    })
+    map.addControl(directions, "top-left")
+    directions.setOrigin("Minneapolis")
+    directions.setDestination("Burnsville")
+  }
+)}
+)
 
