@@ -8,8 +8,7 @@ def create_tea(name, description, benefit, image_url):
     tea = Tea(name=name, 
         description=description,
         benefit=benefit,
-        image_url=image_url,
-    )
+        image_url=image_url)
     
     db.session.add(tea)
     db.session.commit()

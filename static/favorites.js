@@ -1,5 +1,4 @@
 $(window).on("load", function () {
-
   $('.btn.btn-primary.fav-button').each(function(i, obj) {
     $.get('/check_favorites/' + obj.id, response => {
       console.log(typeof response)
@@ -9,7 +8,6 @@ $(window).on("load", function () {
         $(this).addClass('btn btn-primary fav-button')
       }
     })
-
   });
 });        
 

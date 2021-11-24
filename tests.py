@@ -68,7 +68,6 @@ class FlaskTests(unittest.TestCase):
         self.assertIn(b"Cannot create an account with that email.", response.data)
         
         
-        
     def test_login(self):
         """Test login page."""
 
@@ -80,7 +79,7 @@ class FlaskTests(unittest.TestCase):
     
    
     def test_tea_title (self):
-        """ Test all_tea page. Makes sure name of tea is appearing. """
+        """Test all_tea page. Makes sure name of tea is appearing."""
         
         result = self.client.get("/teas", data={"name": "chaitea"})
         self.assertIn(b"chaitea", result.data)

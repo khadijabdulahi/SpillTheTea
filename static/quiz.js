@@ -250,51 +250,51 @@ const questions = [
       { text: 'Sometimes', assign: [3, 2, 5]}
     ]
   },
-  // {
-  //   question: 'What is most important for you?',
-  //   answers: [
-  //     { text: 'Sleep', assign: [6] },
-  //     { text: 'Keeping Healthy', assign: [10, 8, 2] },
-  //     { text: 'Beauty', assign: [1, 3, 5 ]},
-  //     { text: 'Being Happy', assign: [6, 7] },
-  //     { text: 'Being Creative', assign: [2, 7] }
+  {
+    question: 'What is most important for you?',
+    answers: [
+      { text: 'Sleep', assign: [6] },
+      { text: 'Keeping Healthy', assign: [10, 8, 2] },
+      { text: 'Beauty', assign: [1, 3, 5 ]},
+      { text: 'Being Happy', assign: [6, 7] },
+      { text: 'Being Creative', assign: [2, 7] }
 
-  //   ]
-  // },
-  // {
-  //   question: 'How do you enjoy your teas?',
-  //   answers: [
-  //     { text: 'Iced and Sweetened', assign: [6] },
-  //     { text: 'Iced and Unsweetened', assign: [2, 10] },
-  //     { text: 'Warm', assign: [1] },
-  //     { text: 'Hot', assign: [5, 2, 3]}
-  //   ]
-  // },
-  // {
-  //   question: 'What time of day do you like your tea?',
-  //   answers: [
-  //     { text: 'Morning', assign: [3, 1, 5] },
-  //     { text: 'Afternoon', assign: [9] },
-  //     { text: 'Night', assign: [6]}
-  //   ]
-  // },
-  // {
-  //   question: 'What benefit are you hoping to gain?',
-  //   answers: [
-  //     { text: 'Support in Heart Health', assign: [3, 2, 1, 4, 10]},
-  //     { text: 'Support in Brain Health', assign: [2, 3, 4, 5]  },
-  //     { text: 'Support in Digestion', assign:  [8]  },
-  //     { text: 'Support in Liver Health', assign: [6, 9]  },
-  //     { text: 'Reduce in Motion Sickness', assign: [7] },
-  //     { text: 'Strong Teeth and Bones', assign: [10] }
-  //   ]
-  // },
-  // {
-  //   question: 'On a scale of 1 to never how often do you drink tea weekly?',
-  //   answers: [
-  //     { text: '1-3 times a week', assign: [8] },
-  //     { text: '4-7 almost daily', assign: [5] },
-  //     { text: '8+, if i was getting paid to drink tea id be a millionarie', assign: [3] }
-  //   ]
-  // }
+    ]
+  },
+  {
+    question: 'How do you enjoy your teas?',
+    answers: [
+      { text: 'Iced and Sweetened', assign: [6] },
+      { text: 'Iced and Unsweetened', assign: [2, 10] },
+      { text: 'Warm', assign: [1] },
+      { text: 'Hot', assign: [5, 2, 3]}
+    ]
+  },
+  {
+    question: 'What time of day do you like your tea?',
+    answers: [
+      { text: 'Morning', assign: [3, 1, 5] },
+      { text: 'Afternoon', assign: [9] },
+      { text: 'Night', assign: [6]}
+    ]
+  },
+  {
+    question: 'What benefit are you hoping to gain?',
+    answers: [
+      { text: 'Support in Heart Health', assign: [3, 2, 1, 4, 10]},
+      { text: 'Support in Brain Health', assign: [2, 3, 4, 5]  },
+      { text: 'Support in Digestion', assign:  [8]  },
+      { text: 'Support in Liver Health', assign: [6, 9]  },
+      { text: 'Reduce in Motion Sickness', assign: [7] },
+      { text: 'Strong Teeth and Bones', assign: [10] }
+    ]
+  },
+  {
+    question: 'On a scale of 1 to never how often do you drink tea weekly?',
+    answers: [
+      { text: '1-3 times a week', assign: [8] },
+      { text: '4-7 almost daily', assign: [5] },
+      { text: '8+, if i was getting paid to drink tea id be a millionarie', assign: [3] }
+    ]
+  }
 ]
