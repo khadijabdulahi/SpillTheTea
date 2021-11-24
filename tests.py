@@ -29,7 +29,25 @@ class FlaskTests(unittest.TestCase):
         response = self.client.get('/', content_type="html/text")
         self.assertEqual(response.status_code, 200)
    
+    def test_quiz(self):
+        """Test quiz route."""
+
+        response = self.client.get('/teaquiz', content_type="html/text")
+        self.assertEqual(response.status_code, 200)
+        
    
+    def test_search(self):
+        """Test search route."""
+
+        response = self.client.get('/search', content_type="html/text")
+        self.assertEqual(response.status_code, 200)
+    
+    
+    def test_all_teas(self):
+        """Test all teas route."""
+
+        response = self.client.get('/teas', content_type="html/text")
+        self.assertEqual(response.status_code, 200)
     def test_user_registration(self):
         """Test user registration"""
     
@@ -40,8 +58,6 @@ class FlaskTests(unittest.TestCase):
                             follow_redirects=True) 
         self.assertIn(b"Account created!", response.data)  
         
-        
-   
    
     def test_registration_existing_email(self):
         """Test user attempting to create an account with an existing email."""
@@ -62,16 +78,8 @@ class FlaskTests(unittest.TestCase):
                                         "password": "testing"},
                                   follow_redirects=True)
         self.assertIn(b"Get Inspired!", result.data)
-        
-    
-    
-    def test_quiz(self):
-        """Test quiz route."""
 
 
-        response = self.client.get('/teaquiz', content_type="html/text")
-        self.assertEqual(response.status_code, 200)
-        
 
     def tearDown(self):
         """Do at the end of every test."""
