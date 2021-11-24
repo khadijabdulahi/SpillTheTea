@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile Page {% endblock %}
+
+{% block body %}
+<div class="background-image-search-container"> 
+    <div class="container mt-4">
+  <div class="row">
+    <h1>Tea Cafe</h1>
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="card-body row no-gutters align-items-center">
+          <div class="col-auto">
+            <i class="fas fa-search h4 text-body"></i>
+            <form action="/process_search" method="POST" > 
+              <div class="row">
+                <div class="col-6">
+                  <input type="text" placeholder="Enter a zipcode" name="zipcode">
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+    
+{% endblock %}
+
+
+
+    

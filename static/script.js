@@ -1,39 +1,53 @@
-// $(window).on("load", function () {
-  $.get('/mapbox', response => {
-    mapboxgl.accessToken = String(response)
+const getDestination = document.getElementById('address1')
+$.get('/mapbox', response => {
+  let token = String(response)
 
-    navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
-        enableHighAccuracy: true
-      })
+  mapboxgl.accessToken = token
+  navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+    enableHighAccuracy: true
+  })
+  
+  const startLocation = []
+  function successLocation(position) {
+    setupMap([position.coords.longitude, position.coords.latitude])
+    startLocation.push(position.coords.longitude, position.coords.latitude)
+  }
+  
+  function errorLocation() {
+    setupMap([-2.24, 53.48])
+  }
+
+  function setupMap(center) {
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: center,
+      zoom: 15
+    })
+  
+    const nav = new mapboxgl.NavigationControl()
+    map.addControl(nav)
+  
+    let directions = new MapboxDirections({
+      accessToken: mapboxgl.accessToken
+    })
       
-      function successLocation(position) {
-        setupMap([position.coords.longitude, position.coords.latitude])
-      }
-      
-      function errorLocation() {
-        setupMap([-2.24, 53.48])
-      }
-      
-      function setupMap(center) {
-        const map = new mapboxgl.Map({
-          container: "map",
-          style: "mapbox://styles/mapbox/streets-v11",
-          center: center,
-          zoom: 15
-        })
-      
-        const nav = new mapboxgl.NavigationControl()
-        map.addControl(nav)
-      
-        let directions = new MapboxDirections({
-          accessToken: mapboxgl.accessToken
-        })
-      
-        map.addControl(directions, "top-left")
-      }
-      
+    map.addControl(directions, "top-left")
+
+    map.on('load', function() {
+    var directions = new MapboxDirections({
+      accessToken: mapboxgl.accessToken
+    });
+    map.addControl(directions, 'top-left');
+  
+    directions.setOrigin(startLocation);
+    directions.setDestination(getDestination.innerText);
+  });
+  }
+
 })
-// })
+
+
 $(".test").click(function(){
   $("#exampleModal").modal("show");
 });
@@ -49,8 +63,8 @@ map.on('load', function(){
       accessToken: mapboxgl.accessToken
     })
     map.addControl(directions, "top-left")
-    directions.setOrigin("Minneapolis")
-    directions.setDestination("Burnsville")
+    directions.setOrigin('Brockton Avenue, Toronto')
+    directions.setDestination('East York Avenue, Toronto');
   }
 )}
 )

@@ -21,11 +21,18 @@
       <p>  
          {{ tea.benefit}} 
       </p>
+      {% if session.get('firstname') %}  
+      <button type="button" id ="{{tea.id}}" class="btn btn-primary fav-button">Favorite</button>
+    {% endif %}
     </div>
   <div class="col">
     <div class="row">
       <img src="{{ tea.image_url }}">
+
     </div>
+    </div>
+    <div> 
+      
     </div>
   </div>
 </div>
