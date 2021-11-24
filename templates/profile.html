@@ -5,14 +5,9 @@
 {% block body %}
 <div class="background-image-profile-container"> 
 <div class="container mt-4">
-
-    <!-- <h1> Welcome! </h1> -->
+    <h2> Hello, {{user.firstname}}</h2>
     <h3>Your Favorite Teas</h3>
-
-
- 
   <div class="row">
-
     {% for fav_tea in favorite_teas %}
     <!-- <div>{{fav_tea.tea.name}}</div> -->
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-4">

@@ -10,14 +10,11 @@ class FlaskTests(unittest.TestCase):
     def setUp(self):
         """Set up test."""
 
-        # Get the Flask test client
         self.client = app.test_client()
         app.config['TESTING'] = True
 
-        # Connect to test database
         connect_to_db(app, "postgresql:///sample_data")
 
-        # Create tables and add sample data
         db.create_all()
         test_data()
     
@@ -25,9 +22,9 @@ class FlaskTests(unittest.TestCase):
     def test_homepage(self):
         """Test homepage route."""
 
-
         response = self.client.get('/', content_type="html/text")
         self.assertEqual(response.status_code, 200)
+   
    
     def test_quiz(self):
         """Test quiz route."""
@@ -48,6 +45,8 @@ class FlaskTests(unittest.TestCase):
 
         response = self.client.get('/teas', content_type="html/text")
         self.assertEqual(response.status_code, 200)
+        
+        
     def test_user_registration(self):
         """Test user registration"""
     
@@ -78,7 +77,13 @@ class FlaskTests(unittest.TestCase):
                                         "password": "testing"},
                                   follow_redirects=True)
         self.assertIn(b"Get Inspired!", result.data)
-
+    
+   
+    def test_tea_title (self):
+        """ Test all_tea page. Makes sure name of tea is appearing. """
+        
+        result = self.client.get("/teas", data={"name": "chaitea"})
+        self.assertIn(b"chaitea", result.data)
 
 
     def tearDown(self):
@@ -88,7 +93,6 @@ class FlaskTests(unittest.TestCase):
         db.drop_all()
         db.engine.dispose()
         
-
 
 if __name__ == "__main__":
     unittest.main()

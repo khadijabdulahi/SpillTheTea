@@ -1,8 +1,5 @@
-// Once the page is loaded 
 $(window).on("load", function () {
 
-  // grabs 3 different class in the button in the all tea's page 
-  // each increments through all the favorite tea buttons 
   $('.btn.btn-primary.fav-button').each(function(i, obj) {
     $.get('/check_favorites/' + obj.id, response => {
       console.log(typeof response)

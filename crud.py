@@ -2,21 +2,19 @@
 
 from model import db, User, Tea, Favorite, connect_to_db
 
-
 def create_tea(name, description, benefit, image_url):
     """Create and return a new tea."""
 
-    tea = Tea(name = name, 
-        description = description,
-        benefit = benefit,
-        image_url =image_url,
+    tea = Tea(name=name, 
+        description=description,
+        benefit=benefit,
+        image_url=image_url,
     )
-
+    
     db.session.add(tea)
     db.session.commit()
 
     return tea
-
 
 
 def get_teas():
@@ -25,12 +23,10 @@ def get_teas():
     return Tea.query.all()
 
 
-
 def get_tea_by_id(id):
     """Return a tea by primary key."""
 
     return Tea.query.get(id)
-
 
 
 def create_user(email, firstname, password):
@@ -44,12 +40,10 @@ def create_user(email, firstname, password):
     return user
 
 
-
 def get_users():
     """Return all users."""
 
     return User.query.all()
-
 
 
 def get_user_by_id(id):
@@ -58,12 +52,10 @@ def get_user_by_id(id):
     return User.query.get(id)
 
 
-
 def get_user_by_email(email):
     """Return a user by email."""
 
     return User.query.filter(User.email == email).first()
-
 
 
 def add_favorite_tea(tea_id, user_id):
@@ -78,28 +70,24 @@ def add_favorite_tea(tea_id, user_id):
     return favorite
 
 
-
 def get_user_favorite_teas(user_id):
-    """Get all favorite teas a user favorited. """
+    """ Returns all favorite teas a user favorited. """
 
     return Favorite.query.filter_by(user_id=user_id).all()
 
 
-
 def check_if_tea_in_favorites(tea_id):
-    """Check if tea exists in favorites table and return True or False"""
+    """ Return True if a tea exists in favorites table. """
     return True if Favorite.query.filter_by(tea_id = tea_id).first() else False 
   
   
-  
 def remove_favorite_tea(tea_id):
-    """Unfavorite a tea a user favorited."""
+    """ Deletes a favorite tea a used 'unfavorted'. """
     
     favorited_tea = Favorite.query.filter_by(tea_id = tea_id).one()
     db.session.delete(favorited_tea)
     db.session.commit()
     return " "
-
 
 
 if __name__ == "__main__":

@@ -25,23 +25,23 @@ $.get('/mapbox', response => {
       zoom: 15
     })
   
-    const nav = new mapboxgl.NavigationControl()
-    map.addControl(nav)
+    // const nav = new mapboxgl.NavigationControl()
+    // map.addControl(nav)
   
-    let directions = new MapboxDirections({
-      accessToken: mapboxgl.accessToken
-    })
+    // let directions = new MapboxDirections({
+    //   accessToken: mapboxgl.accessToken
+    // })
       
-    map.addControl(directions, "top-left")
+    // map.addControl(directions, "top-left")
 
     map.on('load', function() {
-    var directions = new MapboxDirections({
+      var directions = new MapboxDirections({
       accessToken: mapboxgl.accessToken
-    });
-    map.addControl(directions, 'top-left');
-  
-    directions.setOrigin(startLocation);
-    directions.setDestination(getDestination.innerText);
+      });
+      map.addControl(directions, 'top-left');
+
+      directions.setOrigin('Minneapolis, MN');
+      directions.setDestination(getDestination.innerText);
   });
   }
 
@@ -55,17 +55,3 @@ $(".test").click(function(){
 $("#closebutton").click(function(){
   $("#exampleModal").modal("hide");
 })
-
-map.on('load', function(){
-  $.get('/mapbox', response => {
-    mapboxgl.accessToken = String(response)
-    let directions = new MapboxDirections({
-      accessToken: mapboxgl.accessToken
-    })
-    map.addControl(directions, "top-left")
-    directions.setOrigin('Brockton Avenue, Toronto')
-    directions.setDestination('East York Avenue, Toronto');
-  }
-)}
-)
-

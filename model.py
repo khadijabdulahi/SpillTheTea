@@ -68,11 +68,9 @@ def connect_to_db(flask_app, db_uri="postgresql:///teas", echo=True):
 def test_data():
     """Create some sample data."""
 
-    # In case this is run more than once, empty out existing data
     User.query.delete()
     Tea.query.delete()
 
-    # Add sample user and teas
     test_user = User(id=150,
             email="user@test.com",
             password="testing",
