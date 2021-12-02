@@ -56,38 +56,38 @@ img{
    } */ 
 
    .background-image-container {
-    background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2015%2F05%2F25%2FGettyImages-564075419-2000.jpg");
+    background-image: url("https://twigscafe.com/wp-content/uploads/2021/05/black-and-green-loose-leaf-teas-in-wooden-spoons-on-white-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 92vh;
+    min-height: 100vh;
     min-width: 100vw;
   }
 
    .background-image-search-container {
-    background-image: url("https://images-prod.healthline.com/hlcmsresource/images/AN_images/hibiscus-tea-1296x728.jpg");
+    background-image: url("https://www.summittea.com/wp-content/uploads/2018/07/MasalaChaiBT-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 92vh;
+    min-height: 10vh;
     min-width: 100vw;
   }  
  
-  /* .background-image-profile-container {
-    background-image: url("https://uploads-ssl.webflow.com/5d8a366133b3d4f879cbd418/5d8a366133b3d406afcbdc15_SWlvOTrKOTwuctDSXz5fSZsb8EJ-7ACXkq7_rROcSe7BDpg0feW9iOSh011NOMqUs9GwFiB2CxtOK8RPx2oADGBWa2b7OwWGs3LTN6L58tDvIDsHR532yYY7lpst433GXxTCbKJN.jpeg);
+  .background-image-profile-container {
+    background-image: url("https://i.pinimg.com/originals/cf/58/1f/cf581fd135ee5cd2ce250b74805514b0.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 92vh;
+    min-height: vh;
     min-width: 100vw;
-  } */
+  }
 
   .background-image-quiz-container {
-    background-image: url("https://www.traditionalmedicinals.com/wp-content/uploads/2020/11/PPJ-Header_Herbs-the-Respiratory-System.jpg");
+    background-image: url("https://cdn.shopify.com/s/files/1/1234/1342/articles/unnamed_7c04bc13-cc44-4ff7-acf8-29598d3d4e33_1200x.jpg?v=1567610710");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 92vh;
+    min-height: 100vh;
     min-width: 100vw;
   }
 
@@ -98,6 +98,33 @@ img{
     padding: 26px;
   }
 
+
+  .background-image-homepage-container {
+    background-image: url("https://images.pexels.com/photos/5389352/pexels-photo-5389352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+  .background-image-allteas-container {
+    background-image: url("https://i.pinimg.com/originals/11/4f/83/114f83b28124fe1a152c488fefd7b4bb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+  .background-image-teadetail-container {
+    background-image: url("https://i.pinimg.com/originals/cf/58/1f/cf581fd135ee5cd2ce250b74805514b0.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 10vh;
+    min-width: 10vw;
+  }
 
 #map {
   width: 550px;
@@ -202,7 +229,6 @@ button:hover, a:hover {
 
 
 
-
 .bodyz {
   min-height: 100vh;
   display: flex;
@@ -238,9 +264,9 @@ h4 {
 	cursor: pointer;
 }
 
-body {
+/* body {
 	padding-top: 20px;
-}
+} */
 
 .click span {
 	margin-left: 4px;
@@ -325,3 +351,20 @@ span:active {
 * {
 	transition: all .32s ease;
 }
+
+#website-name { 
+  font-family: 'Pacifico', cursive;
+  font-size: xx-large;
+  color:rgb(0, 0, 0)}
+
+p { font-family: 'Crimson Pro', serif;
+    font-size: large; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight:  700;
+}
+
+/* .material-icons .heart {font-size: 18px !important} */
+
+.material-icons.md-18 { font-size: 18px; }

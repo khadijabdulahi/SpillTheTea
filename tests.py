@@ -81,8 +81,9 @@ class FlaskTests(unittest.TestCase):
     def test_tea_title (self):
         """Test all_tea page. Makes sure name of tea is appearing."""
         
-        result = self.client.get("/teas", data={"name": "chaitea"})
+        result = self.client.get("/teas")
         self.assertIn(b"chaitea", result.data)
+        self.assertIn(b"lemontea", result.data)
 
 
     def tearDown(self):

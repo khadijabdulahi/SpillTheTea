@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="container mt-4">
-	<h1>All Teas</h1>
+<div class="container">
+	<h3 class="text-center"> Different Types of Teas </h3>
+
+<body class="background-image-allteas-container" > 
   <div class="row">
 	{% for tea in teas %}
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-4">
 			<div class="card border-3 bg-light shadow-sm  text-right">
 				<img src="{{ tea.image_url }}" class="bd-placeholder-img card-img-top" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-				    <h5 class="card-title">{{ tea.name }}</h5>
+				    <h5 class ="text-center" class="card-title"> {{ tea.name }}</h5>
 
 					<div class="card-body">
 						<div class="d-flex justify-content-between align-items-center">
@@ -17,8 +19,12 @@
 									<button type="button" class="btn btn btn-outline-secondary">View</button>
 									<br> 
 								</a>
-									{% if session.get('firstname') %}  
-									<button type="button" id ="{{tea.id}}" class="btn btn-primary fav-button">Favorite</button>
+							</div>
+							<div class="btn-group">
+								{% if session.get('firstname') %}  
+									<button type="button" id ="{{tea.id}}" class="btn btn-outline-dark fav-button" > <span class="material-icons">
+										star_border
+										</span></button>
 									{% endif %}
 							</div>
 						</div>
@@ -28,6 +34,7 @@
 		{% endfor %}
   </div>
 </div>
+</body>
 {% endblock %}
 
 

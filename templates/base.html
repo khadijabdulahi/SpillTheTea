@@ -30,12 +30,17 @@
     href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
     type="text/css"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu:700">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-light navbar-light pt-3 pb-4">
+    <nav class="navbar navbar-expand-lg bg-transparent navbar-light pt-3 pb-4">
       <div class="container">
-        <a class="navbar-brand" aria-current="page" href="/"> <strong> Spill the Tea </strong></a> 
+        <a class="navbar-brand" aria-current="page" id="website-name" href="/"> <strong> Spill the Tea<span class="material-icons">
+          emoji_food_beverage
+          </span></strong></a> 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -45,9 +50,15 @@
               <a class="nav-link" href="/teaquiz">Quiz</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/search">Tea Cafe</a>
+              <a class="nav-link" href="/search">Cafe</a>
             </li>
-            <li class="nav-item dropdown">
+            
+            {% if session.get('firstname') %}  
+              <li>
+                <a class="nav-link" href="/profile">Favorties</a>
+              </li>
+            {% endif %}
+             <li class="nav-item dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Select a Tea
               </button>
@@ -57,23 +68,20 @@
                 {% endfor %}
               </ul>
             </li>
-            {% if session.get('firstname') %}  
-              <li>
-                <a class="nav-link" href="/profile">Favorties</a>
-              </li>
-            {% endif %}
           </ul>
+          <br> 
           {% if not session.get('user_email') %}  
             <a class="nav-link" href="/login">
-              <button class="btn btn-primary"> 
-                Login/Register 
+              <button class="btn btn-success"> 
+                Login
               </button> 
             </a>
           {% else %}
               <form class="d-flex" action="/logout" method="post">
-                <button class="btn btn-danger " type="submit">Logout</button>
+                <button class="btn btn-dark" type="submit">Logout</button>
               </form>
           {% endif %}
+          
         </div>
       </div>
     </nav>

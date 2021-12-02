@@ -4,38 +4,45 @@
 
 {% block body %}
 
-<div class="container mt-4">
-  <div class="row">
-    <div class="col"> 
-      <h1>
-        {{ tea.name }}
-      </h1>
-        <h3>  Description
-        </h3>
-        <p>
-        {{ tea.description}}
-        </p>
-      <h3>  
-        Benefits 
-      </h3>
-      <p>  
-         {{ tea.benefit}} 
-      </p>
-      {% if session.get('firstname') %}  
-      <button type="button" id ="{{tea.id}}" class="btn btn-primary fav-button">Favorite</button>
-    {% endif %}
-    </div>
-  <div class="col">
+<body class="background-image-teadetail-container" > 
+  <div class="container mt-4">
     <div class="row">
-      <img src="{{ tea.image_url }}">
+      <div class="col"> 
+        <img src="{{ tea.image_url }}">
+      </div>
+    <div class="col">
+      <div class="row">
+        <h2 class="text-center">
+          {{ tea.name }}
+        </h2>
+          <h3>  Description
+          </h3>
+          <p>
+          {{ tea.description}}
+          </p>
+        <h3>  
+          Benefits 
+        </h3>
+        <p>  
+          {{ tea.benefit}} 
+        </p>
+        <div class="btn-group">
+          {% if session.get('firstname') %}  
+            <button type="button" id ="{{tea.id}}" class="btn btn-outline-dark fav-button" > <span class="material-icons">
+              star_border
+              </span></button>
+            {% endif %}
+        </div>
+      </div>
 
-    </div>
-    </div>
-    <div> 
+      </div>
+      </div>
+      <div> 
       
     </div>
   </div>
 </div>
+</body>
 {% endblock %}
 
 

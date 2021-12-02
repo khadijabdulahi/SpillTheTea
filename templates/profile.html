@@ -3,15 +3,17 @@
 {% block title %}Profile Page {% endblock %}
 
 {% block body %}
-<div class="background-image-profile-container"> 
+<body class="background-image-profile-container"> 
 <div class="container mt-4">
-    <h2> Hello, {{user.firstname}}</h2>
-    <h3>Your Favorite Teas</h3>
+    <!-- <h3 class="text-center"> Hello, {{user.firstname}} </h3> -->
+    <h3 class="text-center"> Favorite Teas </h3>
+
+
   <div class="row">
     {% for fav_tea in favorite_teas %}
     <!-- <div>{{fav_tea.tea.name}}</div> -->
 		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-4">
-			<div class="card shadow-sm border-danger ">
+			<div class="card shadow-sm">
           <img src="{{ fav_tea.tea.image_url }}" class="bd-placeholder-img card-img-top" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
           {{ fav_tea.tea.name }}
           <div class="card-body">
@@ -31,6 +33,7 @@
       
 </div>
 </div>
+</body> 
     
 {% endblock %}
     

@@ -81,7 +81,7 @@ def check_if_tea_in_favorites(tea_id):
   
   
 def remove_favorite_tea(tea_id):
-    """ Deletes a favorite tea a used 'unfavorted'. """
+    """ Deletes a favorite tea a user 'unfavorted'. """
     
     favorited_tea = Favorite.query.filter_by(tea_id = tea_id).one()
     db.session.delete(favorited_tea)
