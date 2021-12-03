@@ -2,6 +2,7 @@ const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')  
 const questionContainerElement = document.getElementById('question-container') 
 const questionElement = document.getElementById('question')
+const q = document.getElementById('q')
 const answerButtonsElement = document.getElementById('answer-buttons') 
 const resultTea = document.getElementById('result')
 
@@ -25,6 +26,7 @@ function startQuiz() {
   mixQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
+  q.classList.remove('hide')
   resultTea.classList.add('hide')
   renderNextQuestion()
 }
@@ -65,7 +67,8 @@ function selectAnswer(e) {
 
     resultTea.classList.remove('hide')
     questionContainerElement.classList.add('hide')
-    // startButton.classList.remove('invisible')
+    document.getElementById('quiz-block').classList.add('hide')
+    document.getElementById('result').classList.remove('hide')
     let card = document.getElementById('card')
 
 

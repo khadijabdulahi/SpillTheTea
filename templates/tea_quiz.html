@@ -3,18 +3,19 @@
 <body class="background-image-quiz-container"> 
 <div class="container mt-5">
   <div class="d-flex justify-content-center row">
-      <div class="col-md-10 col-lg-10">
+      <div id='quiz-block' class="col-md-10 col-lg-10">
           <div class="border">
               <div class="question bg-white p-3 border-bottom">
                   <div class="d-flex flex-row justify-content-between align-items-center mcq">
-                      <h4>Tea Quiz </h4>
+                      <h4 id="quizc"> Tea Quiz </h4>
                   </div>
               </div>
               <div id="question-container" class="hide"></div>
               <div class="question bg-white p-3 border-bottom">
                   <div id="tea-question">
-                    <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
+                    <div class="d-flex flex-row align-items-center question-title ">
+                        <h3 id="q" class="text-danger hide">Q.</h3>
+                        <br>
                         <h5 id="question" class="mt-1 ml-2"></h5>
                     </div>
                   </div>
@@ -26,28 +27,30 @@
               <div id="start-btn" class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button class="btn btn-primary border-success align-items-center btn-success" type="button">Start<i class="fa fa-angle-right ml-2"></i></button></div>
 
               <div id="next-btn" class="d-flex flex-row justify-content-between align-items-center p-3 bg-white invisible"><button class="btn btn-primary border-success align-items-center btn-success " type="button">Next<i class="fa fa-angle-right ml-2"></i></button></div>
-              <div id="result" class="result hide">
-                <span>You have been matched with.....</span>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-4">
-                  <div id="card" class="card shadow-sm">
-                    <img src="" id="teaimage" class="bd-placeholder-img card-img-top" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <span id="nametea"> </span>
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <a id="teaid" href="">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          </a>
-                        </div>
-                      </div>
+            
+            </div>
+          </div>
+        </div>
+        <div id="result" c class="col-md-10 col-lg-10 result hide">
+          <div>
+            <span class="text-success"><strong> You have been matched with.....</strong></span>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-4">
+              <div id="card" class="card shadow-sm">
+                <img src="" id="teaimage" class="bd-placeholder-img card-img-top" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <span id="nametea"> </span>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a id="teaid" href="">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-            
             </div>
-              </div>
           </div>
+        </div>
       </div>
   </div>
 

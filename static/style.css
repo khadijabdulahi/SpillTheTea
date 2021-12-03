@@ -100,7 +100,7 @@ img{
 
 
   .background-image-homepage-container {
-    background-image: url("https://images.pexels.com/photos/5389352/pexels-photo-5389352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-image: url("https://c.pxhere.com/images/61/0d/63176972b83fd13e7182e670216e-1567141.jpg!d");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -353,18 +353,41 @@ span:active {
 }
 
 #website-name { 
-  font-family: 'Pacifico', cursive;
-  font-size: xx-large;
-  color:rgb(0, 0, 0)}
+  font-family: 'Smooch', cursive;
+  font-size:xx-large;
+  color: rgb(1, 56, 51)}
 
 p { font-family: 'Crimson Pro', serif;
     font-size: large; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   font-family: 'Libre Baskerville', serif;
   font-weight:  700;
+  color:rgb(13, 95, 49)
 }
 
-/* .material-icons .heart {font-size: 18px !important} */
+h3{
+  font-family: 'Smooch', cursive;
+  font-size: 40px;
+  color:rgb(13, 95, 49)
+
+}
 
 .material-icons.md-18 { font-size: 18px; }
+
+.text-success {
+  font-size: 300;
+}
+
+#slogan {
+  font-family: 'Smooch', cursive;
+  font-size: 55px;
+  color:rgb(13, 95, 49)
+}
+#slogan2 {
+  color:rgb(6, 39, 0)
+}
+
+#quizc {
+  color:black
+}
