@@ -78,7 +78,8 @@ Install dependencies:
 ```
 Create a secrets.sh file and save your secret key for this app using the following syntax:
 ```
-export SECRET_KEY="your_secret_key"
+export yelp_token='***'
+export mapbox_token='***'
 ```
 Activate the secrets.sh file in your terminal:
 ```
