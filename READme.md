@@ -27,18 +27,16 @@ Spill the Tea! is a full-stack web application that allows users to learn about 
 - User's can login to an account that exist 
 - Users can view a list of teas and details about each tea along with their image
 - Dropdown bar where users can search for teas 
+- Map where user's can search for tea locations near them 
 
 #### 2.0  : 
 
-- Map where user's can search for tea locations near them 
 - Users can favorite teas
 - Users can take a quiz to get a tea recommended to them
-
-#### 3.0
-
 - User's can search for cafe location near them by entering zipcode
 - User's can get directions to the cafe 
 - User's can get different inspirational quotes by clicking on a button. 
+
 
 ## <a name="features"></a>Feature
 
