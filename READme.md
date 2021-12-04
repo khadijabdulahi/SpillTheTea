@@ -7,6 +7,7 @@
 * [Roadmap](#roadmap)
 * [Features](#features)
 * [Installation](#installation)
+* Future Iterations(#future)
 
 ## <a name="overview"></a>Overview 
 
@@ -99,3 +100,11 @@ Start the backend server:
 (env) $ python3 server.py
 ```
 Open your browser and type: localhost:5000 to view locally.
+
+## <a name="future"></a>Future Iterations 
+- Users able to favorite cafes to save to their favorites page. 
+- Users able to upload profile photo, favorite quote and favorite tea to personal profile page. 
+- Users able to leave review and ratings for each tea. 
+- Adding more teas to the database
+
+
