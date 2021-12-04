@@ -1,4 +1,5 @@
-#Spill The tea 
+![Screen Shot 2021-12-03 at 3 45 04 PM](https://user-images.githubusercontent.com/91164157/144683358-a3e9b50c-c7f8-42b7-9b8f-bba9e5dd5112.png)
+
 ## Table of Contents 
 * [Overview](#overview)
 * [Tech Stack](#tech-stack)

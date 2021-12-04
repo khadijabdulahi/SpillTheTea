@@ -65,11 +65,11 @@ img{
   }
 
    .background-image-search-container {
-    background-image: url("https://www.summittea.com/wp-content/uploads/2018/07/MasalaChaiBT-2.jpg");
+    background-image: url("https://images.pexels.com/photos/4390014/pexels-photo-4390014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 10vh;
+    min-height: 100vh;
     min-width: 100vw;
   }  
  
@@ -83,7 +83,7 @@ img{
   }
 
   .background-image-quiz-container {
-    background-image: url("https://cdn.shopify.com/s/files/1/1234/1342/articles/unnamed_7c04bc13-cc44-4ff7-acf8-29598d3d4e33_1200x.jpg?v=1567610710");
+    background-image: url("https://images.pexels.com/photos/641038/pexels-photo-641038.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -100,7 +100,7 @@ img{
 
 
   .background-image-homepage-container {
-    background-image: url("https://c.pxhere.com/images/61/0d/63176972b83fd13e7182e670216e-1567141.jpg!d");
+    background-image: url("https://images.pexels.com/photos/1831744/pexels-photo-1831744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -109,7 +109,7 @@ img{
   }
 
   .background-image-allteas-container {
-    background-image: url("https://i.pinimg.com/originals/11/4f/83/114f83b28124fe1a152c488fefd7b4bb.jpg");
+    background-image: url("https://images.pexels.com/photos/6843670/pexels-photo-6843670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -355,7 +355,7 @@ span:active {
 #website-name { 
   font-family: 'Smooch', cursive;
   font-size:xx-large;
-  color: rgb(1, 56, 51)}
+  color: rgb(8, 8, 8)}
 
 p { font-family: 'Crimson Pro', serif;
     font-size: large; }
@@ -365,8 +365,14 @@ h1, h2, h4, h5, h6 {
   font-weight:  700;
   color:rgb(13, 95, 49)
 }
+h3 {
+  font-family: 'Smooch', cursive;
+  font-size: 40px;
+  color:rgb(2, 15, 8)
 
-h3{
+}
+
+#teadetail {
   font-family: 'Smooch', cursive;
   font-size: 40px;
   color:rgb(13, 95, 49)
@@ -382,10 +388,10 @@ h3{
 #slogan {
   font-family: 'Smooch', cursive;
   font-size: 55px;
-  color:rgb(13, 95, 49)
+  color:rgb(255, 255, 255)
 }
 #slogan2 {
-  color:rgb(6, 39, 0)
+  color:rgba(5, 4, 4, 0.479)
 }
 
 #quizc {
