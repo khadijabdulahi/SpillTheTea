@@ -98,4 +98,4 @@ Start the backend server:
 ```
 (env) $ python3 server.py
 ```
-Open your browser and type: http://0.0.0.0:5000/ to the browser to view. 
+Open your browser and type: localhost:5000 to view locally.
