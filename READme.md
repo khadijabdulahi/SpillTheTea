@@ -57,4 +57,4 @@ Get direction to Cafe: <br>
 
 
 ## <a name="about-me"></a>About Me 
-Learn more about Khadija Abdulahi on [LinkedIn](www.linkedin.com/in/khadijaabdulahi).
+Learn more about Khadija Abdulahi on [LinkedIn](https://www.linkedin.com/in/khadijaabdulahi/).
