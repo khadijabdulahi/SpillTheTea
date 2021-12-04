@@ -3,7 +3,8 @@
 ## Table of Contents 
 * [Overview](#overview)
 * [Tech Stack](#tech-stack)
-* [Roadmap & Features](#features)
+* [Roadmap](#roadmap)
+* [Features](#features)
 * [About me](#about-me)
 
 
@@ -18,8 +19,7 @@ Spill the Tea! is a full-stack web application that allows users to learn about 
 **Frontend**:  AJAX, Bootstrap, CSS, HTML, Jinja2, JavaScript, jQuery <br/>
 **APIs**:  Yelp, Mapbox, Quote Generator 
 
-## <a name="features"></a>Roadmap / Features 
-### Roadmap
+## <a name="roadmap"></a>Roadmap
 
 #### MVP :
 
@@ -40,6 +40,7 @@ Spill the Tea! is a full-stack web application that allows users to learn about 
 - User's can get directions to the cafe 
 - User's can get different inspirational quotes by clicking on a button. 
 
+## <a name="features"></a>Feature
 
 ## <a name="about-me"></a>About Me 
 Learn more about Khadija Abdulahi on [LinkedIn](www.linkedin.com/in/khadijaabdulahi).
