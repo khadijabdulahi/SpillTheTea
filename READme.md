@@ -52,3 +52,48 @@ Search for Cafe: <br>
 Get direction to Cafe: <br>
 ![Hnet-image (4)](https://user-images.githubusercontent.com/91164157/144726477-201895bd-1308-4feb-b6ab-05ff47f7e1f0.gif)<br>
 
+## <a name="Installation"></a>Installation 
+
+### Requirements
+
+* PostgreSQL
+* Python 3
+
+If you would like to run this app locally on your own computer, follow the below steps. 
+
+first clone this repository:
+```
+$ git clone https://github.com/khadijabdulahi/SpillTheTea.git
+```
+Create and activate a virtual environment:
+```
+$ pip3 install virtualenv
+$ virtualenv env
+$ source env/bin/activate
+```
+Install dependencies:
+```
+(env) $ pip3 install -r requirements.txt
+```
+Create a secrets.sh file and save your secret key for this app using the following syntax:
+```
+export SECRET_KEY="your_secret_key"
+```
+Activate the secrets.sh file in your terminal:
+```
+(env) $ source secrets.sh
+```
+Create the database:
+```
+(env) $ createdb teas
+```
+Seed the database:
+```
+(env) $ python3 model.py
+(env) $ python3 seed.py
+```
+Start the backend server:
+```
+(env) $ python3 server.py
+```
+Open your browser and type: http://0.0.0.0:5000/ to the browser to view SpillThe Tea app. 
