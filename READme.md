@@ -40,7 +40,11 @@ Spill the Tea! is a full-stack web application that allows users to learn about 
 
 ## <a name="features"></a>Feature
 
-![giphy (1)](https://user-images.githubusercontent.com/91164157/144720514-5a093cda-a37b-4a3e-9446-e24ded99fd4a.gif)
+
+
+https://user-images.githubusercontent.com/91164157/144721295-7ba8d864-0f09-42d4-aaea-7c4a9988679f.mp4
+
+
 
 ## <a name="about-me"></a>About Me 
 Learn more about Khadija Abdulahi on [LinkedIn](www.linkedin.com/in/khadijaabdulahi).
