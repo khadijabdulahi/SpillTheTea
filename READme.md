@@ -94,6 +94,7 @@ Activate the secrets.sh file in your terminal:
 Create the database:
 ```
 (env) $ createdb teas
+(env) $ psql teas < teas.sql
 ```
 Seed the database:
 ```
