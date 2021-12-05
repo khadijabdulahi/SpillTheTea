@@ -45,10 +45,14 @@ Learn more about Khadija Abdulahi on [LinkedIn](https://www.linkedin.com/in/khad
 ## <a name="features"></a>Features :computer:✨
 Insipirational Quote: <br>
 ![Hnet-image (5)](https://user-images.githubusercontent.com/91164157/144726588-393f233e-2a08-4835-81e3-4ddcca1a8f26.gif) <br>
-Quiz: <br>
+Tea Recommendation Quiz: <br>
 ![Hnet-image](https://user-images.githubusercontent.com/91164157/144725920-604db10f-da5c-4c98-a185-1bce5956805a.gif) <br>
-Favorite: <br>
+Register or Login:  <br>
+![Hnet com-image (3)](https://user-images.githubusercontent.com/91164157/144746817-b62ddf42-5c3e-4e58-9c82-b2e63812219b.gif)
+ <br>
+Favorite to save to profile: <br>
 ![Hnet-image (1)](https://user-images.githubusercontent.com/91164157/144726221-c3605a13-4d52-4d46-9654-be63f49f1d34.gif) <br>
+Favorite page and dropdown: <br>
 ![Hnet com-image (1)](https://user-images.githubusercontent.com/91164157/144726798-d829bc26-3481-4e59-b3ca-c0b75f929cba.gif) <br>
 Search for Cafe: <br>
 ![Hnet-image (3)](https://user-images.githubusercontent.com/91164157/144726380-53936e31-b629-47ac-99bb-6ebb4e7f773a.gif) <br> 
