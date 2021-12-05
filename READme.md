@@ -12,6 +12,7 @@
 ## <a name="overview"></a>Overview 🍵 
 
 Spill the Tea! is a full-stack web application that allows users to learn about different types of teas. Users can go to each tea page and learn about the tea and its benefit. Users are also able to search by zipcode for the 12 closest tea cafes near them. User's can also have a tea recommended to them by taking our quiz. Users with registered accounts can favorite teas and have their favorite teas saved between sessions. 
+### :movie_camera: [Demo Video](https://www.youtube.com/watch?v=OFDuUYmS3zs&ab_channel=KhadijaAbdulahi)
 
 ## <a name="about-me"></a>About Me 🧕 
 Learn more about Khadija Abdulahi on [LinkedIn](https://www.linkedin.com/in/khadijaabdulahi/).
