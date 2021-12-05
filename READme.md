@@ -1,6 +1,6 @@
 ![Screen Shot 2021-12-03 at 3 45 04 PM](https://user-images.githubusercontent.com/91164157/144683358-a3e9b50c-c7f8-42b7-9b8f-bba9e5dd5112.png)
 
-## Table of Content
+## Table of Contents 📘
 * [Overview](#overview)
 * [About me](#about-me)
 * [Tech Stack](#tech-stack)
@@ -102,7 +102,7 @@ Start the backend server:
 ```
 Open your browser and type: localhost:5000 to view locally.
 
-## <a name="future"></a>Future Iterations 
+## <a name="future"></a>Future Iterations 🤖
 - Users able to favorite cafes to save to their favorites page. 
 - Users able to upload profile photo, favorite quote and favorite tea to personal profile page. 
 - Users able to leave review and ratings for each tea. 
