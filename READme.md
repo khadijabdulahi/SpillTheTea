@@ -54,7 +54,7 @@ Search for Cafe: <br>
 Get direction to Cafe: <br>
 ![Hnet-image (4)](https://user-images.githubusercontent.com/91164157/144726477-201895bd-1308-4feb-b6ab-05ff47f7e1f0.gif)<br>
 
-## <a name="installation"></a>Installation 
+## <a name="installation"></a>Installation ⚒️
 
 ### Requirements
 
