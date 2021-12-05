@@ -23,7 +23,7 @@ Learn more about Khadija Abdulahi on [LinkedIn](https://www.linkedin.com/in/khad
 **Frontend**:  AJAX, Bootstrap, CSS, HTML, Jinja2, JavaScript, jQuery <br/>
 **APIs**:  Yelp, Mapbox, Quote Generator 
 
-## <a name="roadmap"></a>Roadmap 
+## <a name="roadmap"></a>Roadmap :racing_car:
 
 #### MVP :
 
