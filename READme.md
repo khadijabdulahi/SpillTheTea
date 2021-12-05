@@ -42,7 +42,7 @@ Learn more about Khadija Abdulahi on [LinkedIn](https://www.linkedin.com/in/khad
 - User's can get different inspirational quotes by clicking on a button. 
 
 
-## <a name="features"></a>Features :computer:
+## <a name="features"></a>Features :computer:✨
 Insipirational Quote: <br>
 ![Hnet-image (5)](https://user-images.githubusercontent.com/91164157/144726588-393f233e-2a08-4835-81e3-4ddcca1a8f26.gif) <br>
 Quiz: <br>
