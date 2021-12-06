@@ -37,13 +37,13 @@ Learn more about Khadija Abdulahi on [LinkedIn](https://www.linkedin.com/in/khad
 
 - Users can favorite teas
 - Users can take a quiz to get a tea recommended to them
-- User's can search for cafe location near them by entering zipcode
-- User's can get directions to the cafe 
-- User's can get different inspirational quotes by clicking on a button. 
+- Users can search for cafe location near them by entering zipcode
+- Users can get directions to the cafe 
+- Users can get different inspirational quotes by clicking on a button. 
 
 
 ## <a name="features"></a>Features :computer:✨
-Insipirational Quote: <br>
+Inspirational Quote: <br>
 ![Hnet-image (5)](https://user-images.githubusercontent.com/91164157/144726588-393f233e-2a08-4835-81e3-4ddcca1a8f26.gif) <br>
 Tea Recommendation Quiz: <br>
 ![Hnet-image](https://user-images.githubusercontent.com/91164157/144725920-604db10f-da5c-4c98-a185-1bce5956805a.gif) <br>
