@@ -15,7 +15,7 @@ Spill the Tea! is a full-stack web application that allows users to learn about 
 ### :movie_camera: [Demo Video](https://www.youtube.com/watch?v=hEfEhbBUevo&ab_channel=KhadijaAbdulahi)
 
 ## <a name="about-me"></a>About Me 🧕🏾
-Learn more about Khadija Abdulahi on [LinkedIn](https://www.linkedin.com/in/khadijaabdulahi/).
+Khadija Abdulahi is a Software Engineer in the Twin Cities area in Minnesota. Learn more on [LinkedIn](https://www.linkedin.com/in/khadijaabdulahi/).
 
 ## <a name="tech-stack"></a>Tech Stack :desktop_computer:
 
