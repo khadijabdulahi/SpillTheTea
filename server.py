@@ -1,27 +1,41 @@
 """Server for tea app."""
 
 from flask import Flask, render_template, request, flash, session, redirect, jsonify, json
+import sqlalchemy
 from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
 import os 
 import requests
+import yaml
 
 app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
-mapbox = os.environ["mapbox_token"]
+config = yaml.safe_load(open("config/config.yaml"))
+type = config["database"]["type"]
+username = config["database"]["username"]
+password = os.environ[config["database"]["password"]]
+host = config["database"]["host"]
+port = config["database"]["port"]
+database = config["database"]["database"]
+db_uri = "{type}://{username}:{password}@{host}:{port}/{database}".format(type=type, username=username, password=password, host=host, port=port, database=database)
+print("server main", db_uri)
+app.config.update(
+    SQLALCHEMY_DATABASE_URI=db_uri
+)
+# mapbox = os.environ["mapbox_token"]
 
-yelp = os.environ["yelp_token"]
-yelp_url= "https://api.yelp.com/v3/businesses/search"
+# yelp = os.environ["yelp_token"]
+# yelp_url= "https://api.yelp.com/v3/businesses/search"
 
 
-@app.route("/mapbox")
-def send_mapbox_token():
-    "Sends hidden token."
+# @app.route("/mapbox")
+# def send_mapbox_token():
+#     "Sends hidden token."
     
-    return mapbox 
+#     return mapbox 
 
 
 @app.route("/search")
@@ -223,7 +237,12 @@ def tea_quiz():
 
     return render_template("tea_quiz.html", teas=teas)
 
+@app.route("/ok")
+def ok():
+    return "ok"
+
 
 if __name__ == "__main__":
+   
     connect_to_db(app)
     app.run(host="0.0.0.0", debug=True)

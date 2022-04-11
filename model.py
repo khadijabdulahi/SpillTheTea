@@ -1,6 +1,11 @@
 """ Models for tea app. """
 
 from flask_sqlalchemy import SQLAlchemy
+import yaml 
+import os 
+
+
+
 
 db = SQLAlchemy()
 
@@ -54,7 +59,7 @@ class Favorite(db.Model):
 
 
 def connect_to_db(flask_app, db_uri="postgresql:///teas", echo=True):
-    flask_app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
+    print("sql database uri", flask_app.config["SQLALCHEMY_DATABASE_URI"] ) 
     flask_app.config["SQLALCHEMY_ECHO"] = echo
     flask_app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False 
 
